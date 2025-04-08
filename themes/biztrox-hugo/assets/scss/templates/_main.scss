@@ -1,0 +1,188 @@
+/* 3. hero area */
+.hero {
+  &-slider {
+    padding-bottom: 20px;
+
+    &.swiper-slider {
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50%;
+      outline: 0;
+    }
+
+    .prevArrow,
+    .nextArrow {
+      position: absolute;
+      top: calc(50% - 35px);
+      transform: translateY(-50%);
+      z-index: 9;
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
+      background: rgba($color: $color-secondary, $alpha: .5);
+      color: $white;
+      border: 0;
+      font-size: 25px;
+      line-height: 70px;
+      opacity: 0;
+      transition: all linear .2s;
+
+      @include mobile {
+        display: none;
+      }
+
+      &:focus {
+        outline: 0;
+      }
+
+      &:hover {
+        background: rgba($color: $color-primary, $alpha: .5);
+      }
+    }
+
+    .prevArrow {
+      left: 20px;
+    }
+
+    .nextArrow {
+      right: 20px;
+    }
+
+    &:hover {
+
+      .prevArrow,
+      .nextArrow {
+        opacity: 1;
+      }
+    }
+
+    .swiper-pagination {
+      position: relative;
+      bottom: 0px;
+      padding-left: 0;
+      text-align: center;
+      background-color: $white;
+      margin-bottom: -20px;
+      border-bottom: 1px solid $border-color;
+
+      li {
+        width: 295px;
+        height: 80px;
+        background: $white;
+        margin: 0;
+        display: inline-block;
+        position: relative;
+        border-radius: 0px;
+
+        @include desktop-lg {
+          width: 230px;
+        }
+
+        @include desktop {
+          width: 180px;
+        }
+
+        @include tablet {
+          width: 120px;
+        }
+
+        @include mobile {
+          width: 25%;
+          margin: 0px !important;
+        }
+
+        &::before {
+          position: absolute;
+          content: '';
+          left: 50%;
+          top: -12px;
+          height: 25px;
+          width: 25px;
+          background: $color-secondary;
+          transform: translateX(-50%) rotate(-45deg);
+          opacity: 0;
+        }
+
+        a {
+          display: block;
+          position: relative;
+          text-align: center;
+          transition: .3s ease;
+          color: $color-secondary;
+
+          i {
+            display: inline-block;
+            font-size: 30px;
+            line-height: 80px;
+            margin-right: 15px;
+            vertical-align: middle;
+
+            @include desktop {
+              font-size: 20px;
+              margin-right: 5px;
+            }
+
+            @include tablet {
+              margin: 0;
+            }
+          }
+
+          span {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 80px;
+
+            @include desktop {
+              font-size: 15px;
+            }
+
+            @include tablet {
+              display: none;
+            }
+          }
+        }
+
+        &.swiper-pagination-bullet-active {
+          background: $color-secondary;
+
+          a {
+            color: $white;
+          }
+
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &-content {
+    h4 {
+      letter-spacing: 2px;
+      font-weight: 700;
+      color: white !important;
+      /* Ensures subtitle is white */
+    }
+
+    h1,
+    h2 {
+      color: #ffffff !important;
+      /* Ensures main titles are white */
+      font-weight: 900 !important;
+    }
+
+    p {
+      color: #ffffff !important;
+      /* Ensures paragraph content is white */
+      font-weight: 700;
+    }
+
+    /* Specific targeting for the 2nd slide's content */
+    .hero-slider .swiper-slide:nth-child(2) .hero-slider-content .subtitle,
+    .hero-slider .swiper-slide:nth-child(2) .hero-slider-content .content {
+      color: #000080 !important;
+      /* Set text color to Navy Blue */
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.gradient-text {
+    background: linear-gradient(45deg, #0b54da, #3e47f1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+/* Make all service images the same height */
+.service-image {
+    width: 100%;
+    /* Ensures the image spans the full width */
+    height: 300px;
+    /* Set a fixed height for the images */
+    object-fit: cover;
+    /* Ensures the aspect ratio is maintained while filling the box */
+    object-position: center;
+    /* Centers the image in the container */
+}

@@ -1,0 +1,24 @@
+.gradient-text {
+  background: linear-gradient(45deg, #f0f0f0, #c4c4c4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.btn-cowboys {
+  background: linear-gradient(135deg, #041E42, #A5ACAF);
+  /* Navy to Silver */
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.btn-cowboys:hover {
+  background: linear-gradient(135deg, #001833, #8c9399);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}

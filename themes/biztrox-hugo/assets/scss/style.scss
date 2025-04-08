@@ -1,0 +1,82 @@
+// Color Variables
+{{ with site.Params.variables }}
+$color-primary: {{.color_primary | default "#777"}};
+$color-secondary: {{.color_secondary | default "#0AA8A7"}};
+$text-color: {{.text_color | default "#777"}};
+$text-dark: {{.text_dark | default "#222"}};
+$body-bg: {{.body_color | default "#fff"}};
+$border-color: {{.border_color | default "#ECECEC"}};
+$black: {{.black | default "#000"}};
+$white: {{.white | default "#fff"}};
+$light: {{.light | default "#EDF6F5"}};
+$bg-gray: {{.bg_gray | default "#f5f5f5"}};
+
+
+// Font Variables
+$font-size: {{.font_size | default "16px"}};
+$font-scale: {{.font_scale | default "1.25"}};
+$font-primary: '{{replace (replaceRE ":[ital,]*[ital@]*[wght@]*[0-9,;]+" "" .font_primary | default "Lato") "+" " "}}', {{.font_primary_type | default "sans-serif"}};
+$font-secondary: '{{replace (replaceRE ":[ital,]*[ital@]*[wght@]*[0-9,;]+" "" .font_secondary | default "Lato") "+" " "}}', {{.font_secondary_type | default "sans-serif"}};
+$font-icon: '{{.font_icon | default "Font Awesome 5 Free"}}';
+{{ end }}
+
+
+@import 'templates/bootstrap';
+
+@import 'mixins';
+
+@import 'typography';
+
+@import 'preloader';
+
+@import 'images';
+
+@import 'common';
+
+@import 'templates/navigation';
+
+@import 'templates/footer';
+
+@import 'templates/main';
+
+@import 'buttons';
+
+@import 'notice';
+
+@import "social-share";
+
+@import "toc";
+
+@import "tab";
+
+@import 'templates/custom';
+
+/* 
+  Styling for the logo image inside the navbar:
+  
+  - height: 115% !important; 
+    This sets the height of the logo to be 115% of its container's height. The `!important` ensures that this style takes precedence over other conflicting styles.
+  
+  - width: 115% !important; 
+    This sets the width of the logo to be 115% of its container's width, making the logo slightly larger than the container. The `!important` ensures that this style overrides any other conflicting width values.
+  
+  - object-fit: contain; 
+    This ensures that the logo maintains its aspect ratio while being scaled to fit within its container. The `contain` value ensures the entire image is visible without clipping, even if the logo's aspect ratio differs from the container's aspect ratio.
+
+  - padding: 0 !important; 
+    This removes any padding that might be applied to the image, ensuring that the image's size is determined solely by its width and height properties, without any added space around it.
+
+  - margin: 0 !important; 
+    This removes any margin around the logo image, ensuring that there is no extra space outside the image.
+
+  - display: block; 
+    This makes the logo image a block-level element, ensuring that it behaves like a block and doesn’t have any unnecessary inline behavior, allowing it to fill its container as needed.
+*/
+.navbar-brand img {
+    height: 115% !important;
+    width: 115% !important;
+    object-fit: contain;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block;
+}
