@@ -30,7 +30,7 @@ copyright = "Up to Par Technologies"
 theme_copyright = true
 
 # footer content
-footer_content = "Lorem ipsum dolor amet consectetur adipisicing elit sed eiusm tempor incididunt labore dolore magna aliqua enim." 
+footer_content = "Powering Business with Smart IT & Structured Cabling Solutions. Always Up to Par, Always Ahead." 
 
 
 # Preloader
@@ -46,7 +46,7 @@ link = "contact"
 
 # contact info
 [contact_info]
-address = "1826 Brentwood Dr. Leander, TX 78641"
+address = "Leander, TX 78641"
 email = "info@utptech.net"
 mobile = "+15128036232"
 

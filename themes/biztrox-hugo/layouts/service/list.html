@@ -1,25 +1,60 @@
 {{ define "main" }}
 
-{{ "<!-- service -->" | safeHTML }}
+<!-- service section -->
 <section class="section">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-12">
-        <div class="post-content">
-          {{ .Content }}
-        </div>
-      </div>
-      {{ range .Data.Pages }}
-      {{ .Render "service" }}
-      {{ end }}
-    </div>
-  </div>
-</section>
-{{ "<!-- /servie -->" | safeHTML }}
+	<div class="container">
+		<div class="row justify-content-center">
 
+			<!-- Page content -->
+			<div class="col-lg-12">
+				<div class="post-content mb-5">
+					{{ .Content }}
+				</div>
+			</div>
+
+			<!-- Service cards -->
+			{{ $pages := where .RegularPages "Params.weight" "ne" nil }}
+			{{ range ( sort $pages ".Params.weight" "asc" ) }}
+			<div class="col-lg-4 col-md-6 mb-4">
+				<div class="card h-100 text-center shadow">
+			
+					<!-- Icon (Font Awesome) -->
+					{{ with .Params.icon }}
+					<div class="mt-4">
+						<i class="fa {{ . }} fa-2x text-primary"></i>
+					</div>
+					{{ end }}
+			
+					<!-- Image -->
+					{{ with .Params.image }}
+					<img src="{{ . | relURL }}" alt="{{ $.Title }}" class="card-img-top p-3">
+					{{ end }}
+			
+					<!-- Title & Summary -->
+					<div class="card-body">
+						<h5 class="card-title">{{ .Title }}</h5>
+						<p class="card-text">{{ .Params.description }}</p>
+					</div>
+			
+					<!-- CTA -->
+					<div class="card-footer border-0 bg-white">
+						<a href="{{ .RelPermalink }}" class="btn btn-outline-primary">Read More</a>
+					</div>
+			
+				</div>
+			</div>
+			{{ end }}
+
+		</div>
+	</div>
+</section>
+<!-- /service section -->
+
+<!-- clients section (optional) -->
 {{ with .Params.satisfied_clients }}
-{{ "<!-- clients -->" | safeHTML }}
-<section class="clients section bg-secondary overlay-dark"  {{ partial `bg-image.html` (dict `Src` .bg_image ) | safeHTMLAttr }}>
+{{ if .enable }}
+<section class="clients section bg-secondary overlay-dark" {{ partial `bg-image.html` (dict `Src` .bg_image ) |
+	safeHTMLAttr }}>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6">
@@ -31,7 +66,7 @@
 				<div class="row justify-content-around align-items-center">
 					{{ range .logo }}
 					<div class="col-6 text-center">
-						{{ partial "image.html" (dict "Src" . "Alt" "client-logo"  "Class" `py-3`) }}
+						{{ partial "image.html" (dict "Src" . "Alt" "client-logo" "Class" `py-3`) }}
 					</div>
 					{{ end }}
 				</div>
@@ -39,10 +74,10 @@
 		</div>
 	</div>
 </section>
-{{ "<!-- /clients -->" | safeHTML }}
+{{ end }}
 {{ end }}
 
-<!-- testimonial -->
+<!-- testimonial section -->
 {{ if .Params.testimonial.enable }}
 {{ if .Params.testimonial.inherit_homepage }}
 {{ with .GetPage "/" }}

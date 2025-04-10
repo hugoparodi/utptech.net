@@ -3,8 +3,8 @@ title: "IT Consulting"
 date: 2018-09-29T11:54:02+06:00
 description : "This is meta description"
 image: images/banner/consulting-1.jpg
-bg_image: images/background/page-title.jpg
-icon: ti-briefcase
+bg_image: images/banner/banner-3.jpg
+icon: "fa-solid fa-business-time"
 brochure: '#'
 regularDay: Sun-Tues
 regularTime: 08.00am - 06.00pm
@@ -12,6 +12,7 @@ halfDay: Thursday
 halfTime: 08.00am - 01.00pm
 offDay: Friday
 type : service
+weight: 2
 ---
 
 ### IT Consulting Services Tailored to Your Business Needs.

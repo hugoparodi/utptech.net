@@ -75,6 +75,14 @@ service:
   section: "service" # showing items from service section
   # service item comes from "content/service" folder
 
+########################################## Industries ####################################
+industries:
+  enable : true
+  title: "Industries We Service"
+  subtitle: "Best Service"
+  section: "industries" # showing items from industries section
+  # service item comes from "content/industries" folder
+
 ######################################## About #########################################
 about:
   enable : false

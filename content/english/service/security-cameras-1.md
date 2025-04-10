@@ -12,6 +12,7 @@ halfDay: Thursday
 halfTime: 08.00am - 01.00pm
 offDay: Friday
 type : service
+weight: 6
 ---
 ### Security Camera Solutions for Unmatched Protection
 

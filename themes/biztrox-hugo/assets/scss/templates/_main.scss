@@ -108,7 +108,7 @@
           position: relative;
           text-align: center;
           transition: .3s ease;
-          color: $color-secondary;
+          color: #001e61 !important; // ✅ Inactive label = Navy Blue
 
           i {
             display: inline-block;
@@ -116,6 +116,7 @@
             line-height: 80px;
             margin-right: 15px;
             vertical-align: middle;
+            color: #001e61 !important; // ✅ Icon = Navy Blue
 
             @include desktop {
               font-size: 20px;
@@ -146,7 +147,11 @@
           background: $color-secondary;
 
           a {
-            color: $white;
+            color: $white !important;
+          }
+
+          i {
+            color: $white !important;
           }
 
           &::before {
@@ -162,27 +167,22 @@
       letter-spacing: 2px;
       font-weight: 700;
       color: white !important;
-      /* Ensures subtitle is white */
     }
 
     h1,
     h2 {
       color: #ffffff !important;
-      /* Ensures main titles are white */
       font-weight: 900 !important;
     }
 
     p {
       color: #ffffff !important;
-      /* Ensures paragraph content is white */
       font-weight: 700;
     }
 
-    /* Specific targeting for the 2nd slide's content */
     .hero-slider .swiper-slide:nth-child(2) .hero-slider-content .subtitle,
     .hero-slider .swiper-slide:nth-child(2) .hero-slider-content .content {
       color: #000080 !important;
-      /* Set text color to Navy Blue */
     }
   }
 }

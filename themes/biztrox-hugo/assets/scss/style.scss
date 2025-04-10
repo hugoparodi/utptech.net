@@ -51,6 +51,8 @@ $font-icon: '{{.font_icon | default "Font Awesome 5 Free"}}';
 
 @import 'templates/custom';
 
+@import 'templates/services';
+
 /* 
   Styling for the logo image inside the navbar:
   
@@ -79,4 +81,10 @@ $font-icon: '{{.font_icon | default "Font Awesome 5 Free"}}';
     padding: 0 !important;
     margin: 0 !important;
     display: block;
+}
+
+.card .card-img-top {
+  height: 200px !important;
+  width: 100% !important;
+  object-fit: cover !important;
 }

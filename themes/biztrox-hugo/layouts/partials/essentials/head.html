@@ -7,49 +7,33 @@
 <!-- theme meta -->
 <meta name="theme-name" content="biztrox-hugo" />
 
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-dHjbnN5F+LFiHqJz6IQb9TKaN+RH0RHY6pNSs+u2MiZjYOcO7XDWimGp+5oEvYAx00UJcBfYUnN8t2Vmyb1x9w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <!-- favicon -->
 {{ partialCached "favicon" . }}
-
 
 <!-- manifest -->
 {{ partialCached "manifest" . }}
 
-
 <!-- site verifications -->
 {{ partialCached "site-verifications.html" . }}
-
 
 <!-- opengraph and twitter card -->
 {{ partial "basic-seo.html" . }}
 
-
 <!-- custom script -->
-{{ partialCached "custom-script.html" . }}
-
+{{/* partialCached "custom-script.html" . */}}
 
 <!-- google analytics -->
-{{ template "_internal/google_analytics.html" . }}
+{{/* template "_internal/google_analytics.html" . */}}
 
-
-<!-- google tag manager -->
-{{ partialCached "gtm.html" . }}
-
-
-<!-- matomo analytics -->
-{{ partialCached "matomo-analytics.html" . }}
-
-
-<!--  Baidu analytics -->
-{{ partialCached "baidu-analytics.html" . }}
-
-
-<!-- Plausible Analytics -->
-{{ partialCached "plausible-analytics.html" . }}
-
-
-<!-- Counter Analytics -->
-{{ partialCached "counter-analytics.html" . }}
-
-
-<!-- Crisp Chat -->
-{{ partialCached "crisp-chat.html" . }}
+<!-- REMOVE unnecessary trackers/ads -->
+{{/* partialCached "gtm.html" . */}}
+{{/* partialCached "matomo-analytics.html" . */}}
+{{/* partialCached "baidu-analytics.html" . */}}
+{{/* partialCached "plausible-analytics.html" . */}}
+{{/* partialCached "counter-analytics.html" . */}}
+{{/* partialCached "crisp-chat.html" . */}}

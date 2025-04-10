@@ -6,7 +6,7 @@ description: "Explore the full range of IT solutions we provide to help your bus
 
 ################## Satisfied clients ###############
 satisfied_clients:
-  enable: False
+  enable: false
   bg_image: images/background/clients-bg.jpg
   subtitle: Trusted By
   title: Satisfied Clients
@@ -22,8 +22,8 @@ satisfied_clients:
 
 ################### call to action ##################
 testimonial:
-  enable: False
-  inherit_homepage: False
+  enable: false
+  inherit_homepage: false
   # testimonial content comes from "_index.md" file
 ---
 

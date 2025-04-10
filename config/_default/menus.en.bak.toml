@@ -1,0 +1,76 @@
+# ------------ MAIN MENU ------------
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "About"
+url = "/about/"
+weight = 2
+
+[[menu.main]]
+name = "Industries"
+url = "/industries/"
+weight = 3
+
+[[menu.main]]
+name = "Services"
+url = "/services/"
+weight = 4
+
+[[menu.main]]
+name = "Contact"
+url = "/contact/"
+weight = 5
+
+# --- Commented out future menu items ---
+
+# [[menu.main]]
+# name = "Blog"
+# url = "/blog/"
+# weight = 6
+
+# [[menu.main]]
+# name = "Team"
+# url = "/team/"
+# weight = 7
+
+# [[menu.main]]
+# hasChildren = true
+# name = "Pages"
+# weight = 8
+
+# [[menu.main]]
+# name = "Project"
+# parent = "Pages"
+# url = "/project/"
+
+# [[menu.main]]
+# name = "Pricing"
+# parent = "Pages"
+# url = "/pricing/"
+
+
+# ------------ FOOTER MENU ------------
+
+[[menu.footer]]
+name = "Legal"
+url = "#"
+weight = 1
+
+# [[menu.footer]]
+# name = "Sitemap"
+# url = "#"
+# weight = 2
+
+[[menu.footer]]
+name = "Privacy Policy"
+url = "#"
+weight = 3
+
+[[menu.footer]]
+name = "Terms & Conditions"
+url = "#"
+weight = 4

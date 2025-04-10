@@ -1,9 +1,9 @@
 ---
-title: "Networking Technology"
+title: "Networking Technologies"
 date: 2018-09-29T11:51:17+06:00
 description : "This is meta description"
 image: images/banner/network-services-1.jpg
-bg_image: images/background/page-title.jpg
+bg_image: images/banner/networking-001.jpg
 icon: "fa-solid fa-network-wired"
 brochure: '#'
 regularDay: Sun-Tues
@@ -12,6 +12,7 @@ halfDay: Thursday
 halfTime: 08.00am - 01.00pm
 offDay: Friday
 type : service
+weight: 4
 ---
 
 ### Networking Technology Solutions for Seamless Connectivity.

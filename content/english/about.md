@@ -36,7 +36,7 @@ mission:
   content: >
     Our mission at Up To Par Technologies is to simplify, secure, and scale the IT landscape for modern organizations. We exist to be more than a service provider — we are your strategic technology partner.<br><br>
     We’re driven by the belief that reliable, forward-thinking IT is essential for growth. Every solution we deliver is guided by integrity, built for resilience, and designed to empower the people and processes that make your business thrive.
-  image: images/chart.png
+  image: images/banner/about-us-001.jpg
   accordion:
     - title: Our Company Mission
       description: >

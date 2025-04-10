@@ -1,6 +1,6 @@
 ######################## default configuration ####################
-baseURL = "https://demo.gethugothemes.com/biztrox/site/"
-title = "Biztrox"
+baseURL = "https://utptech.net"
+title = "Up To Par Technologies"
 theme = "biztrox-hugo"
 # Default time zone for time stamps; use any valid tz database name: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
 timeZone = "America/Chicago"
@@ -95,3 +95,57 @@ suffixes = ["webmanifest"]
 mediaType = "application/manifest+json"
 rel = "manifest"  
 
+########################### Menus ###############################
+
+[menu]
+
+  [[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+  [[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 2
+
+  [[menu.main]]
+  name = "Industries"
+  url = "/industries/"
+  weight = 3
+
+  [[menu.main]]
+  name = "Services"
+  url = "/service/"
+  weight = 4
+
+  [[menu.main]]
+  name = "Contact"
+  url = "/contact/"
+  weight = 5
+
+  # Optional future items:
+  # [[menu.main]]
+  # name = "Blog"
+  # url = "/blog/"
+  # weight = 6
+
+  # [[menu.main]]
+  # name = "Team"
+  # url = "/team/"
+  # weight = 7
+
+  [[menu.footer]]
+  name = "Legal"
+  url = "#"
+  weight = 1
+
+  [[menu.footer]]
+  name = "Privacy Policy"
+  url = "#"
+  weight = 2
+
+  [[menu.footer]]
+  name = "Terms & Conditions"
+  url = "#"
+  weight = 3

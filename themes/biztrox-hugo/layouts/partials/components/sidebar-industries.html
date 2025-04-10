@@ -1,0 +1,10 @@
+<div class="bg-white px-4 py-100 sidebar-box-shadow">
+  <h2 class="mb-3 h4">Industries We Serve</h2>
+  <ul class="list-unstyled mb-0">
+    {{ range where .Site.RegularPages "Section" "industries" }}
+    <li class="border-bottom">
+      <a href="{{ .RelPermalink }}" class="d-block text-color py-10">{{ .Title }}</a>
+    </li>
+    {{ end }}
+  </ul>
+</div>

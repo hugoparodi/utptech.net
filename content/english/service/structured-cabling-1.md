@@ -4,7 +4,7 @@ slug: "structured-cabling"
 date: 2025-04-06T16:30:00+06:00
 description: "Comprehensive structured cabling services to support modern network infrastructure."
 image: "images/banner/structured-cabling-3.jpg"
-bg_image: "images/background/page-title.jpg"
+bg_image: "images/banner/structured-cabling-banner.jpg"
 icon: "fa-solid fa-ethernet"  # Updated to a more network-related icon
 brochure: "downloads/structured-cabling-brochure.pdf"
 regularDay: "Mon–Fri"
@@ -13,6 +13,7 @@ halfDay: "Saturday"
 halfTime: "08:00 AM – 01:00 PM"
 offDay: "Sunday"
 type: service
+weight: 1
 ---
 
 ### Reliable and Scalable Structured Cabling Solutions
